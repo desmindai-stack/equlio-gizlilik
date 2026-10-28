@@ -4,15 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Equlio - Gizlilik Politikası</title>
+<link rel="alternate" hreflang="en" href="privacy-en.html">
 <style>
   body { font-family: -apple-system, system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 24px; line-height: 1.7; color: #1f2d24; }
   h1 { color: #1f3d2b; border-bottom: 2px solid #b9772e; padding-bottom: 8px; }
   h2 { color: #1f3d2b; margin-top: 32px; }
   a { color: #b9772e; }
   .tarih { color: #666; font-size: 14px; }
+  .dil { float: right; font-size: 14px; margin: 4px 0 0 12px; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; margin: 12px 0; }
+  th, td { border: 1px solid #ddd3bf; padding: 8px; text-align: left; vertical-align: top; }
+  th { background: #f3ede1; }
+  .tablo { overflow-x: auto; }
+  .not { background: #f3ede1; border-radius: 8px; padding: 12px 16px; font-size: 14px; }
 </style>
 </head>
 <body>
+<p class="dil"><a href="privacy-en.html" hreflang="en" lang="en">English</a></p>
 <h1>Equlio Gizlilik Politikası</h1>
 <p class="tarih">Son güncelleme: 29 Ekim 2026</p>
 
@@ -38,14 +46,66 @@
 <p>Bilgileriniz reklam amacıyla kullanılmaz ve üçüncü taraflara pazarlama amacıyla satılmaz.</p>
 
 <h2>3. Bilgilerin Saklanması ve Güvenliği</h2>
-<p>Verileriniz, güvenli altyapı sağlayıcısı Supabase üzerinde saklanır. Erişim, rol bazlı yetkilendirme ile sınırlandırılmıştır; her kullanıcı yalnızca yetkili olduğu bilgilere erişebilir. Verileriniz uygun teknik ve idari tedbirlerle korunur.</p>
+<p>Verileriniz, altyapı sağlayıcısı Supabase üzerinde, Almanya'daki (Frankfurt, AWS eu-central-1) sunucularda saklanır. Erişim, rol bazlı yetkilendirme ile sınırlandırılmıştır; her kullanıcı yalnızca yetkili olduğu bilgilere erişebilir. Verileriniz uygun teknik ve idari tedbirlerle korunur.</p>
 
-<h2>4. Üçüncü Taraf Hizmetler</h2>
-<p>Equlio aşağıdaki üçüncü taraf hizmetleri kullanır:</p>
-<ul>
-  <li><strong>Supabase:</strong> Veri saklama ve kimlik doğrulama altyapısı.</li>
-  <li><strong>iyzico:</strong> Güvenli ödeme işlemleri. Kart bilgileriniz iyzico'nun güvenli altyapısında işlenir.</li>
-</ul>
+<h2>4. Veri İşleyenler ve Yurt Dışına Aktarım</h2>
+<p>Equlio, hizmeti sunabilmek için aşağıdaki hizmet sağlayıcılardan yararlanır. Bu sağlayıcılar kişisel verileri yalnızca belirtilen amaçla ve Equlio adına işler. Sağlayıcıların bir kısmı yurt dışında bulunduğundan, bu hizmetlerin kullanımı kişisel verilerin yurt dışına aktarılması anlamına gelir.</p>
+<!-- AVUKAT KONTROLÜ: her sağlayıcının KVKK'daki rolü (veri işleyen / ayrı veri sorumlusu), aktarım dayanağı ve bu bölümün ifadesi -->
+<div class="tablo">
+<table>
+  <tr><th>Sağlayıcı</th><th>Amaç</th><th>İşlenen veri türü</th><th>Ülke / bölge</th><th>Aktarım dayanağı</th></tr>
+  <tr>
+    <td><strong>Supabase</strong> (Supabase Inc.)</td>
+    <td>Veritabanı, kimlik doğrulama (giriş), dosya depolama (fotoğraflar), sunucu işlevleri</td>
+    <td>Uygulamada tutulan tüm veriler: hesap ve iletişim bilgileri, kulüp / binici / at / ders / ödeme kayıtları, sağlık ve bakım kayıtları, fotoğraflar, giriş kayıtları (IP adresi)</td>
+    <td>Almanya (Frankfurt, AWS eu-central-1); şirket ABD merkezli</td>
+    <td>KVKK md. 9 kapsamında standart sözleşme — [tarih]<!-- AVUKAT KONTROLÜ --></td>
+  </tr>
+  <tr>
+    <td><strong>Vercel</strong> (Vercel Inc.)</td>
+    <td>Web uygulamasının barındırılması</td>
+    <td>Bağlantı bilgileri (IP adresi, tarayıcı bilgisi, istek kayıtları)</td>
+    <td>ABD; içerik küresel sunucu ağı üzerinden sunulur</td>
+    <td>KVKK md. 9 kapsamında standart sözleşme — [tarih]<!-- AVUKAT KONTROLÜ --></td>
+  </tr>
+  <tr>
+    <td><strong>Google Firebase Cloud Messaging</strong> (Google LLC)</td>
+    <td>Telefon bildirimlerinin (push) iletilmesi</td>
+    <td>Cihaz bildirim belirteci, bildirim başlığı ve metni</td>
+    <td>ABD ve küresel</td>
+    <td>KVKK md. 9 kapsamında standart sözleşme — [tarih]<!-- AVUKAT KONTROLÜ --></td>
+  </tr>
+  <tr>
+    <td><strong>Apple Push Notification service</strong> (Apple Inc.)</td>
+    <td>iPhone / iPad'e telefon bildirimlerinin iletilmesi</td>
+    <td>Cihaz bildirim belirteci, bildirim başlığı ve metni</td>
+    <td>ABD ve küresel</td>
+    <td>KVKK md. 9 kapsamında standart sözleşme — [tarih]<!-- AVUKAT KONTROLÜ --></td>
+  </tr>
+  <tr>
+    <td><strong>Resend</strong> (Resend Inc.)</td>
+    <td>E-posta gönderimi (hesap doğrulama, şifre sıfırlama, bildirim e-postaları)</td>
+    <td>E-posta adresi, ad, e-posta içeriği</td>
+    <td>ABD<!-- KONTROL: Resend hesabının gönderim bölgesi (us-east-1 / eu-west-1) --></td>
+    <td>KVKK md. 9 kapsamında standart sözleşme — [tarih]<!-- AVUKAT KONTROLÜ --></td>
+  </tr>
+  <tr>
+    <td><strong>Cloudflare</strong> (Cloudflare Inc.)</td>
+    <td>Alan adı ve DNS hizmeti; destek@ ve kvkk@ adreslerine gelen e-postaların yönlendirilmesi</td>
+    <td>Bağlantı bilgileri (IP adresi); yönlendirilen e-postaların gönderen adresi ve içeriği</td>
+    <td>ABD; küresel sunucu ağı</td>
+    <td>KVKK md. 9 kapsamında standart sözleşme — [tarih]<!-- AVUKAT KONTROLÜ; yönlendirilen e-postaların teslim edildiği gelen kutusu sağlayıcısı da ayrıca değerlendirilmeli --></td>
+  </tr>
+  <tr>
+    <td><strong>iyzico</strong> (İyzi Ödeme ve Elektronik Para Hizmetleri A.Ş.)</td>
+    <td>Kartla ödeme alınması</td>
+    <td>Ödeme tutarı ve ödeme sonucu; kart bilgileri yalnız iyzico'da işlenir, Equlio'da saklanmaz</td>
+    <td>Türkiye</td>
+    <td>Yurt içi; [sözleşme — tarih]<!-- AVUKAT KONTROLÜ: iyzico'nun rolü (veri işleyen / ayrı veri sorumlusu) --></td>
+  </tr>
+</table>
+</div>
+<p class="not">iyzico ile kartla ödeme şu an <strong>test modundadır</strong>: gerçek kart ödemesi alınmamaktadır.</p>
 
 <h2>5. Haklarınız (KVKK Madde 11)</h2>
 <p>KVKK kapsamında; kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, düzeltilmesini veya silinmesini isteme ve işlemeye itiraz etme haklarına sahipsiniz. Bu haklarınızı kullanmak için başvurunuzu <a href="mailto:kvkk@equlio.app">kvkk@equlio.app</a> adresine iletebilirsiniz.</p>
